@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<script type="text/javascript">
+  var items = document.querySelectorAll("img.NO-CACHE");
+  for (var i = items.length; i--;) {
+    var img = items[i];
+    img.src = img.src + '?' + Date.now();
+}
+</script>
 <html lang="fr">
     <head>
         <meta charset="utf-8">
@@ -28,6 +35,6 @@
 
     <br>
     <p>Résultats de la prédiction :</p>
-   <img class="prediction" src="{% for message in get_flashed_messages(category_filter=['image']) %}{{ message }}{% endfor %}" width="640">
+   <img class="prediction NO-CACHE" src="{% for message in get_flashed_messages(category_filter=['image']) %}{{ message }}{% endfor %}" width="640">
     </body>
 </html>

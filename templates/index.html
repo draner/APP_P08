@@ -4,7 +4,6 @@
         <meta charset="utf-8">
         <title>Prédire un mask pour une voiture autonome</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-        <script src="{{ url_for('static', filename='js/nocache.js') }}"></script>
     </head>
 
     <body>
@@ -30,5 +29,6 @@
     <br>
     <p>Résultats de la prédiction :</p>
    <img class="NO-CACHE" src="{% for message in get_flashed_messages(category_filter=['image']) %}{{ message }}{% endfor %}" width="640">
+   <script src="{{ url_for('static', filename='js/nocache.js') }}"></script>
     </body>
 </html>

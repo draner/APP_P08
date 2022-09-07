@@ -5,7 +5,6 @@ import os
 import pandas as pd
 from collections import namedtuple
 import cv2
-import keras
 import base64
 import requests
 import matplotlib
@@ -92,7 +91,7 @@ def read_mask(path):
     label_mask = np.zeros_like(mask)
     for k in mapping_cat:
         label_mask[mask == k] = mapping_cat[k] 
-    label_mask = keras.utils.to_categorical(label_mask, num_classes=NUM_CLASSES)
+    label_mask = np.eye(NUM_CLASSES)[label_mask]
     return label_mask
 
 def prediction(img):

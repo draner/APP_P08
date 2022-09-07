@@ -116,8 +116,6 @@ app.secret_key = 'some_secret'
 @app.route('/predict')
 
 def index():
-    flash("Inconnu", 'prediction')
-    flash("", 'tweet')
     return render_template('index.html', img_list=df['img'].values)
 
 @app.route('/predicted', methods=['POST', 'GET'])
@@ -126,6 +124,8 @@ def predicted():
         path_img = request.form['option']
         index_df = df[df['img'] == path_img].index[0]
         path_mask = df['mask'][index_df]
+        print(path_img)
+        print(path_mask)
         img = read_image(path_img)
         mask = read_mask(path_mask)
         predicted_mask = prediction(path_img)

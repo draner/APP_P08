@@ -11,4 +11,5 @@ opencv-python-headless==4.6.0.66
 numpy==1.23.1
 pandas==1.4.4
 keras==2.9.0
+tensorflow-cpu==1.14.0
 matplotlib==3.5.3

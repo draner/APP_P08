@@ -1,0 +1,64 @@
+body {
+    background-color: darkcyan;
+    text-align: center;
+}
+
+p {
+    font-size: 1.2em;
+    color: white;
+    font-family: Shanti, sans-serif;
+    margin: 20px;
+}
+
+label {
+    font-size: 1.2em;
+    color: white;
+    font-family: Shanti, sans-serif;
+    margin: 20px;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 1px solid white;
+    font-size: 1.2em;
+    color: white;
+    font-family: Shanti, sans-serif;
+}
+
+img {
+    margin: 30px 0 30px 0;
+    width: 150px;
+}
+
+.prediction {
+    width: 640px;
+}
+
+input {
+    width: 250px;
+    height: 30px;
+    font-size: 1em;
+    font-family: Shanti, sans-serif;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+}
+
+#predict {
+    background-color: darkslategray;
+    color: white;
+    width: 200px;
+}
+
+#predict:hover {
+    background-color: darkturquoise;
+    cursor: pointer;
+}
+
+span {
+    font-size: 1.4em;
+    color: white;
+    font-family: Shanti, sans-serif;
+}

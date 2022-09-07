@@ -29,6 +29,9 @@ for root, dirs, files in os.walk('static/img/val_img'):
             img_names.append(os.path.join(root, file))
 
 # On crée un dataframe avec les chemins vers les images et les masques
+# sort the list of images and masks
+img_names.sort()
+mask_names.sort()
 df = pd.DataFrame({'img': img_names, 'mask': mask_names})
 
 #--------------------------------------------------------------------------------
